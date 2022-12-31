@@ -878,9 +878,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<script type="text/javascript">
-		function pesan() {
-			alert("I LOVE YOU ANTHYY <3");
-		}
+		
+            function pesan() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "https://api.countapi.xyz/hit/mysite.com/awesomeclick");
+                xhr.responseType = "json";
+                xhr.onload = function() {
+                    alert(`This button has been clicked ${this.response.value} times!`);
+                }
+                xhr.send();
+            }
+            
 	</script>
 
 </head>
