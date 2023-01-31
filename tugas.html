@@ -11,8 +11,21 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&display=swap');
 
-        .container {
-            padding: 30px;
+        .main-container {
+            width: 50%;
+            margin: auto;
+            padding-top: 40%;
+            position: relative;
+        }
+
+        .mai-container embed {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 600%;
+            width: 100%;
         }
 
         h1 {
@@ -37,12 +50,15 @@
 <body>
 <embed>
     <h1>TUGAS SEKOLAH PKWU </h1>
-    <div class="container">
+    <div class="main">
+    <h1>TUGAS SEKOLAH PKWU </h1>
+    <div class="main-container">
         <embed type="application/pdf" src="pdf/TUGAS PKWU.pdf" width="100%" height="600px"></embed>
     </div>
 
     <div class="dasbor">
         <a href="index.html" class="badge bg-primary me-1 my-1">back to dashboard</a>
     </div>
+</div>
 </body>
 </html>
