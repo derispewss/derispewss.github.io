@@ -1315,7 +1315,7 @@ Dari Sini
 													</div>
 												</div>
 												<h1 class="mt-1 mb-3">
-													<div class="visitor" id="visits"></div>
+													<div class="visitor" id="updateVisitors"></div>
 												</h1>
 												<div class="mb-0">
 													<span class="text-success"> <i
@@ -1875,13 +1875,37 @@ Dari Sini
 	</script>
 
 	<script>
-		var xhr = new XMLHttpRequest();
-		xhr.open("GET", "https://api.countapi.xyz/hit/derispewss.github.io/visits");
-		xhr.responseType = "json";
-		xhr.onload = function() {
-			document.getElementById('visits').innerText = this.response.value;
-		}
-		xhr.send();
+		//var xhr = new XMLHttpRequest();
+		//xhr.open("GET", "https://api.countapi.xyz/hit/derispewss.github.io/visits");
+		//xhr.responseType = "json";
+		//xhr.onload = function() {
+			//document.getElementById('visits').innerText = this.response.value;
+		//}
+		//xhr.send();
+
+		let visitors = 0;
+
+function incrementVisitors() {
+  visitors++;
+}
+
+function getVisitors(callback) {
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "/api/visitors");
+  xhr.onload = () => {
+    const response = JSON.parse(xhr.responseText);
+    callback(response.visitors);
+  };
+  xhr.send();
+}
+
+function updateVisitors() {
+  incrementVisitors();
+  getVisitors((visitors) => {
+    document.getElementById("visitors-count").innerText = visitors;
+  });
+}
+
 	</script>
 
 	<script src="js/script.js"></script>
