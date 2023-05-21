@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Halaman Top Up Game</title>
+  <title>Halaman Top Up Game - Form Add List</title>
   <style>
     /* Gaya tampilan halaman */
     body {
@@ -12,48 +12,48 @@
       color: #333;
     }
     
-    .game-list {
-      list-style-type: none;
-      padding: 0;
+    form {
+      margin-top: 20px;
     }
     
-    .game-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
+    form label {
+      display: block;
+      margin-bottom: 10px;
     }
     
-    .game-logo {
-      width: 50px;
-      height: 50px;
-      margin-right: 10px;
+    form input[type="text"],
+    form textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    
+    form input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <h1>Halaman Top Up Game</h1>
   
-  <h2>Daftar Game:</h2>
-  <ul class="game-list">
-    <li class="game-item">
-      <img src="game1-logo.png" alt="Logo Game 1" class="game-logo">
-      <div>
-        <h3>Game 1</h3>
-        <p>Deskripsi singkat tentang Game 1.</p>
-        <p><a href="topup/game1">Top Up Game 1</a></p>
-      </div>
-    </li>
+  <h2>Tambahkan Game Baru:</h2>
+  <form action="proses_add_list.php" method="POST">
+    <label for="game-name">Nama Game:</label>
+    <input type="text" id="game-name" name="game-name" required>
     
-    <li class="game-item">
-      <img src="game2-logo.png" alt="Logo Game 2" class="game-logo">
-      <div>
-        <h3>Game 2</h3>
-        <p>Deskripsi singkat tentang Game 2.</p>
-        <p><a href="topup/game2">Top Up Game 2</a></p>
-      </div>
-    </li>
+    <label for="game-description">Deskripsi Game:</label>
+    <textarea id="game-description" name="game-description" rows="4" required></textarea>
     
-    <!-- Tambahkan daftar game lainnya sesuai kebutuhan -->
-  </ul>
+    <input type="submit" value="Tambahkan">
+  </form>
 </body>
 </html>
