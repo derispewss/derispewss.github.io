@@ -1,71 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Landing Page</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: Arial, sans-serif;
-			background-color: #f2f2f2;
-		}
-
-		header {
-			background-color: #333;
-			color: #fff;
-			padding: 10px;
-			text-align: center;
-			font-size: 2em;
-		}
-
-		.container {
-			margin: 50px auto;
-			width: 80%;
-			max-width: 1200px;
-			background-color: #fff;
-			padding: 20px;
-			box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-		}
-
-		h1 {
-			font-size: 2.5em;
-			margin-top: 0;
-			text-align: center;
-		}
-
-		p {
-			font-size: 1.2em;
-			line-height: 1.5;
-			margin-bottom: 20px;
-			text-align: center;
-		}
-
-		a {
-			background-color: #333;
-			color: #fff;
-			padding: 10px 20px;
-			border: none;
-			border-radius: 5px;
-			font-size: 1.2em;
-			cursor: pointer;
-			margin-top: 20px;
-			display: block;
-			margin: 0 auto;
-			text-decoration: none;
-		}
-	</style>
+  <title>Halaman Top Up Game</title>
+  <style>
+    /* Gaya tampilan halaman */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      color: #333;
+    }
+    
+    .game-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .game-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .game-logo {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+  </style>
 </head>
 <body>
-	<header>
-		<h1>Welcome to My Landing Page</h1>
-	</header>
-	<div class="container">
-		<h1>Heading</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at risus at eros laoreet ultricies et in enim. Sed euismod, tortor a pulvinar tristique, ante nisi ornare risus, eu laoreet justo lorem at arcu. </p>
-		<a href="index.html" target="_blank">Get started</a>
-	</div>
-	<script>
-		// JavaScript code goes here
-	</script>
+  <h1>Halaman Top Up Game</h1>
+  
+  <h2>Daftar Game:</h2>
+  <ul class="game-list">
+    <li class="game-item">
+      <img src="game1-logo.png" alt="Logo Game 1" class="game-logo">
+      <div>
+        <h3>Game 1</h3>
+        <p>Deskripsi singkat tentang Game 1.</p>
+        <p><a href="topup/game1">Top Up Game 1</a></p>
+      </div>
+    </li>
+    
+    <li class="game-item">
+      <img src="game2-logo.png" alt="Logo Game 2" class="game-logo">
+      <div>
+        <h3>Game 2</h3>
+        <p>Deskripsi singkat tentang Game 2.</p>
+        <p><a href="topup/game2">Top Up Game 2</a></p>
+      </div>
+    </li>
+    
+    <!-- Tambahkan daftar game lainnya sesuai kebutuhan -->
+  </ul>
 </body>
 </html>
