@@ -1,59 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Halaman Top Up Game - Form Add List</title>
+  <title>Halaman Login</title>
   <style>
-    /* Gaya tampilan halaman */
     body {
       font-family: Arial, sans-serif;
     }
-    
-    h1 {
-      color: #333;
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
-    
-    form {
-      margin-top: 20px;
+
+    h2 {
+      text-align: center;
     }
-    
-    form label {
+
+    label {
       display: block;
       margin-bottom: 10px;
     }
-    
-    form input[type="text"],
-    form textarea {
+
+    input[type="text"],
+    input[type="password"] {
       width: 100%;
-      padding: 5px;
-      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
-    
-    form input[type="submit"] {
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
       background-color: #4CAF50;
-      color: white;
+      color: #fff;
       border: none;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin-top: 10px;
+      border-radius: 4px;
       cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
-  <h1>Halaman Top Up Game</h1>
-  
-  <h2>Tambahkan Game Baru:</h2>
-  <form action="proses_add_list.php" method="POST">
-    <label for="game-name">Nama Game:</label>
-    <input type="text" id="game-name" name="game-name" required>
-    
-    <label for="game-description">Deskripsi Game:</label>
-    <textarea id="game-description" name="game-description" rows="4" required></textarea>
-    
-    <input type="submit" value="Tambahkan">
-  </form>
+  <div class="container">
+    <h2>Halaman Login</h2>
+    <form>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Masukkan username">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Masukkan password">
+
+      <input type="submit" value="Login">
+    </form>
+  </div>
 </body>
 </html>
