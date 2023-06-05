@@ -44,22 +44,20 @@
       text-align: center;
     }
 
-    @keyframes blink {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+    @keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 
-    .blinking-text {
-      animation: blink 1s infinite;
-    }
-
+  .typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end);
+  }
     /* responsive */
     @media only screen and (max-width: 600px) {
   header {
@@ -100,7 +98,7 @@
   </nav>
 
   <section id="home">
-    <h2 class="blinking-text">Welcome to My Portfolio</h2>
+    <h2 class="typing-text">Welcome to My Portfolio</h2>
     <p>Selamat datang di portofolio saya. Saya adalah seorang pengembang web yang berpengalaman.</p>
   </section>  
 
