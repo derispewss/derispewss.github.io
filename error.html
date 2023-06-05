@@ -1,64 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Halaman Login</title>
+  <title>Portofolio Saya</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <style>
+      /* style.css */
     body {
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
-    .container {
-      max-width: 400px;
-      margin: 0 auto;
+    header {
+      background-color: #333;
       padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      color: #fff;
     }
 
-    h2 {
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    footer {
+      background-color: #333;
+      padding: 20px;
+      color: #fff;
       text-align: center;
     }
 
-    label {
-      display: block;
-      margin-bottom: 10px;
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
 
-    input[type="text"],
-    input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #45a049;
+    .blinking-text {
+      animation: blink 1s infinite;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Halaman Login</h2>
-    <form>
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" placeholder="Masukkan username">
+  <header>
+    <h1>Portofolio Saya</h1>
+  </header>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Masukkan password">
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-      <input type="submit" value="Login">
-    </form>
-  </div>
+  <section id="home">
+    <h2>Welcome to My Portfolio</h2>
+    <p class="linking-text">Selamat datang di portofolio saya. Saya adalah seorang pengembang web yang berpengalaman.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Beberapa informasi tentang diri saya dan latar belakang pendidikan serta pengalaman kerja saya.</p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <p>Berikut adalah beberapa proyek yang telah saya kerjakan.</p>
+    <!-- Tambahkan informasi dan gambar proyek-proyek Anda di sini -->
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Jika Anda tertarik untuk bekerja sama atau memiliki pertanyaan, silakan hubungi saya melalui informasi kontak di bawah ini.</p>
+    <ul>
+      <li>Email: example@example.com</li>
+      <li>Telepon: 123-456-7890</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Portofolio Saya. Dibuat dengan cinta.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
